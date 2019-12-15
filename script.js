@@ -30,7 +30,6 @@ function on() {
   }
   if(location.search !== "") {
     let x = location.search.split("?").join("").split("of");
-    alert(x);
     document.getElementById('event').value = x[0];
     document.getElementById('year').value = "/" + x[1];
   }
