@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Countdown</title>
+  <style>
+    * {
+      text-align: center;
+      font-family: Arial;
+    }
+    #header, select {
+      font-size: calc(2vw);
+    }
+    #time {
+      font-size: calc(13vw);
+    }
+    select {
+      text-align: center;
+      text-align-last: center;
+    }
+  </style>
+  <script src="script.js"></script>
+</head>
+<body onload="on()">
+  <h1 id="header">Time Until <select id="event">
+    <option value="nyd">New Year's Day</option>
+    <option value="mlkjd">Martin Luther Kind Jr. Day</option>
+    <option value="ghd">Groundhog Day</option>
+    <option value="vtd">Valentines Day</option>
+    <option value="pd">Presidents' Day</option>
+    <option value="stpd">St. Patrick's Day</option>
+    <option value="nvwvd">National Vietnam War Veterans Day</option>
+    <option value="mod">Mother's Day</option>
+    <option value="med">Memorial Day</option>
+    <option value="dd">D-Day</option>
+    <option value="id">Independence Day</option>
+    <option value="ld">Labor Day</option>
+    <option value="cd">Columbus Day</option>
+    <option value="hw">Halloween</option>
+    <option value="vd">Veterans Day</option>
+    <option value="tgd">Thanksgiving Day</option>
+    <option value="bf">Black Friday</option>
+    <option value="cm">Cyber Monday</option>
+    <option value="ceve">Christmas Eve</option>
+    <option value="cday">Christmas</option>
+    <option value="nyeve">New Year's Eve</option>
+    </select> Of <select id="year">
+    </select></h1>
+  <span id="time"></span>
+</body>
+</html>
