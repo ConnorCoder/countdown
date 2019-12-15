@@ -28,6 +28,11 @@ function on() {
     y.textContent = 1900 + new Date().getYear() + x;
     document.getElementById('year').appendChild(y);
   }
+  if(location.search !== "") {
+    let x = location.search.split("?").join("").split("of");
+    document.getElementById('event').value = x[0];
+    document.getElementById('year').value = x[1];
+  }
 }
 function load() {
   let timetill = (new Date(dates[document.getElementById('event').value]+document.getElementById('year').value).getTime() - new Date().getTime()) / 1000;
