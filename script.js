@@ -70,13 +70,17 @@ function load() {
   // Current Time Display
   let h = new Date().getHours();
   let m = new Date().getMinutes();
-  let e = "AM";
+  let s = new Date().getSeconds();
+  let e = " AM";
   if (h > 12) {
     h = h - 12;
-    e = "PM";
+    e = " PM";
   }
   if (m.toString().length < 2) {
     m = "0" + m.toString();
   }
-  document.getElementById('current').innerHTML = h + ":" + m + " " + e;
+  if (s.toString().length < 2) {
+    s = "0" + s.toString();
+  }
+  document.getElementById('current').innerHTML = h + ":" + m + ":" + s + e;
 }setInterval(load, 0);
