@@ -10,11 +10,11 @@
       font-family: Arial;
     }
     #header, select {
-      font-size: calc(2vw);
-      margin-bottom: calc(10vh);
+      font-size: 2vw;
+      margin-bottom: 10vh;
     }
     #time {
-      font-size: calc(13vw);
+      font-size: 13vw;
     }
     select {
       text-align: center;
@@ -22,6 +22,11 @@
       background: transparent;
       border: none;
       font-weight: bold;
+    }
+    #current {
+      position: fixed;
+      bottom: 0px;
+      font-size: 5vw;
     }
   </style>
   <script src="script.js"></script>
@@ -52,5 +57,6 @@
     </select> Of <select id="year">
     </select></h1>
   <span id="time"></span>
+  <span id="current"></span>
 </body>
 </html>
