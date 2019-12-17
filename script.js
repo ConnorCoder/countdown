@@ -35,6 +35,7 @@ function on() {
   }
 }
 function load() {
+  // Time Till Display
   let timetill = (new Date(dates[document.getElementById('event').value]+document.getElementById('year').value).getTime() - new Date().getTime()) / 1000;
   if(timetill >= 0) { 
     let years = (timetill - (timetill % 31536000)) / 31536000;
@@ -66,4 +67,16 @@ function load() {
   }else {
     document.getElementById('time').innerHTML = "Past";
   }
+  // Current Time Display
+  let hours = new Date().getHours();
+  let minutes = new Date().getMinutes();
+  let extra = "AM";
+  if (hours > 12) {
+    hours = hours - 12;
+    extra = "PM";
+  }
+  if (minutes.toString().length < 2) {
+    minutes = "0" + minutes.toString();
+  }
+  document.getElementById('current').innerHTML = hours + ":" + minutes + " " + extra;
 }setInterval(load, 0);
