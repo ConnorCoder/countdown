@@ -68,15 +68,15 @@ function load() {
     document.getElementById('time').innerHTML = "Past";
   }
   // Current Time Display
-  let hours = new Date().getHours();
-  let minutes = new Date().getMinutes();
-  let extra = "AM";
-  if (hours > 12) {
-    hours = hours - 12;
-    extra = "PM";
+  let h = new Date().getHours();
+  let m = new Date().getMinutes();
+  let e = "AM";
+  if (h > 12) {
+    h = h - 12;
+    e = "PM";
   }
-  if (minutes.toString().length < 2) {
-    minutes = "0" + minutes.toString();
+  if (m.toString().length < 2) {
+    m = "0" + m.toString();
   }
-  document.getElementById('current').innerHTML = hours + ":" + minutes + " " + extra;
+  document.getElementById('current').innerHTML = h + ":" + m + " " + e;
 }setInterval(load, 0);
