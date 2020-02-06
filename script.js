@@ -74,8 +74,6 @@ function load() {
   let e = " AM";
   if (h > 12) {
     h = h - 12;
-  }
-  if (h > 11) {
     e = " PM";
   }
   if (m.toString().length < 2) {
