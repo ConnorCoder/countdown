@@ -83,4 +83,5 @@ function load() {
     s = "0" + s.toString();
   }
   document.getElementById('current').innerHTML = h + ":" + m + ":" + s + e;
+  document.title = h + ":" + m + ":" + s + e;
 }setInterval(load, 0);
